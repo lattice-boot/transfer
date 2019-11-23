@@ -27,6 +27,7 @@ jobs:
     - name: publish
       run: |
         npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+        npm run build
         npm publish --access=public
       env:
         CI: true
